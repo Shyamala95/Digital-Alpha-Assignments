@@ -1,0 +1,12 @@
+Company : AlphaCom
+Founded : 1988
+Employees : 50,000
+Revenue : 18% growth rate
+
+Recommendations :
+
+Since AlphaCom indulges majorly in Banking, Healthcare and Transportation services it is better to use services like hybrid cloud. Mailing services and notifications can be managed by Paas, like Gmail and other services. The Amazon web services (Iaas) can be implemented in order to store the files, implenting virtual machines and other resources, so that the installation expenditure on each system can be reduced . It also provides highly reliable ,scalable , low cost infrastructure platform in cloud.
+
+The Banking sector can be managed by using private cloud, (Though the private cloud is not secure itself incase of data leakage.) Transportation and Healthcare sector can be manged by using hybrid cloud where the user credentials are private and the facilities are public. This helps in easier access for information and backups too. 
+
+The Revenue can be increased using applications by Saas via cloud in a way where they upgrade into new products and also improvise the old ones. 
