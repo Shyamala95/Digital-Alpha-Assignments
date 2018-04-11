@@ -1,0 +1,54 @@
+
+#nseries
+n=int(input("Enter a number: "))
+a=[]
+for i in range(1,n+1):
+    print(i," ",end=" ")
+    if(i<n):
+        print("+"," ",end=" ")
+    a.append(i)
+print("=",sum(a))
+ 
+print()
+
+
+"""
+Created on Wed Apr 11 22:01:45 2018
+
+@author: Shyamala
+"""
+#multiply 
+temp = str(n)
+t1 = temp+temp
+t2 = temp + temp + temp
+comp = n+int(t1)+int(t2)
+print("value of n+nn+nnn:", comp)
+
+for n in range(1,n+1):
+    array.append(1)
+    for i in range(n-2 , 0,-1):
+        array[i] += array[i-1]
+    print("ROW",n,array)
+    
+    
+
+"""
+Created on Wed Apr 11 22:01:43 2018
+
+@author: Shyamala
+"""
+#pascal_triangle
+   def pascal_triangle(n):
+   trow = [1]
+   y = [0]
+   for x in range(max(n,0)):
+      print(trow)
+      trow=[l+r for l,r in zip(trow+y, y+trow)]
+   return n>=1
+pascal_triangle(6)  
+    
+#sumofseries
+sum1=0
+for i in range(1,n+1):
+    sum1=sum1+(1/i)
+print("The sum of series is",round(sum1,2))
