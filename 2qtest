@@ -97,3 +97,46 @@ enter the  weight of students40
 enter the  height of students170
 40.0
 EE BMI is overweight
+
+
+
+q1:
+import pandas as pd
+df=pd.read_csv(r"C:\Users\user\camera.csv")
+print(df)
+#To print the properties of data
+print(df.dtypes)
+#summary of statics
+print(df.describe)
+
+print(df.iloc[0,25 ])
+df.plot(x='release',y='Price')
+plt.xlabel('release')
+plt.ylabel('price')
+plt.show()
+df=pd.read_csv("C:/Users/user/Desktop/Camera.csv",sep=';')
+
+print(df.shape)
+print(df.head())
+print(df.columns)
+df.dtypes
+
+
+temp= ["Model","Release date","Price"]
+df1=df[temp]
+df1.iloc[1:25,:]
+
+
+print("Summary-----\n",df.describe())
+
+print("\nPrice ",df["Price"].describe())
+
+
+df3=df[df['Price'] >'1000']
+
+plt.figure(figsize=(12,6))
+plt.plot(df2['Release date'],df2['Price'])
+plt.xlabel("Release date")
+plt.ylabel("Price")
+
+
