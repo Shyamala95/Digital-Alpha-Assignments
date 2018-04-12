@@ -1,0 +1,99 @@
+Created on Thu Apr 12 14:57:03 2018
+
+@author: user
+"""
+
+f=open("data.txt","w")
+n=[]
+n=int(input("enter the number of students"))
+
+for i in range(n):
+         
+        fo.write("enter the student name:%s ")
+        fo.write(int("enter the age of students:"))
+        #f.write(a)
+        fo.write(int("enter the gender of students"))
+        #f.write(g)
+        fo.write(int("enter the  weight of students"))
+        #f.write(w)
+        fo.write(int(("enter the  height of students"))
+        #f.write(h)
+        bmi= (w/h*h)
+        if bmi <= 18.5:
+         print('%s BMI is', bmi,'underweight.')
+       
+        elif bmi > 18.5 and bmi < 25:
+         print('%s BMI is', bmi,' normal.')
+
+        elif bmi > 25 and bmi < 30:
+          print('%s BMI is', bmi,'overweight.')
+          
+for i in range (0,len(n)):
+    fo.write(n[i])
+    fo.write("\n")
+    fo.close()  
+
+
+
+
+enter the number of students 5
+
+enter the student name: AA
+
+enter the age of students:23
+
+enter the gender of studentsfemale
+
+enter the  weight of students43
+
+enter the  height of students156
+43.0
+AA BMI is overweight
+
+enter the student name: BB
+
+enter the age of students:21
+
+enter the gender of students44
+
+enter the  weight of students160
+
+enter the  height of students1160
+160.0
+BB  BMI is overweight
+
+enter the student name: CC
+
+enter the age of students:23
+
+enter the gender of students45
+
+enter the  weight of students40
+
+enter the  height of students148
+40.0
+CC  BMI is overweight
+
+enter the student name: DD
+
+enter the age of students:19
+
+enter the gender of students:female
+
+enter the  weight of students150
+
+enter the  height of students160
+150.0
+DD  BMI is overweight
+
+enter the student name: EE
+
+enter the age of students:17
+
+enter the gender of students male
+
+enter the  weight of students40
+
+enter the  height of students170
+40.0
+EE BMI is overweight
