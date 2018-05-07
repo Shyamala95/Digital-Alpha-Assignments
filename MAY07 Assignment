@@ -1,0 +1,134 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Mon May  7 16:04:42 2018
+
+@author: user
+"""
+#polymorphism
+class Shape:
+    def __init__(self, shape, fill_figure,Triangle):
+        self.fill_figure = fill_figure
+        self.shape = shape
+        self.Triangle=Triangle
+        self.Rectangle=Rectangle
+
+    def show_info(self):
+        print("The shape of the figure is", self.shape)
+        print("The fill_figute property is", self.fill_figure)
+        print("Area of the shape is ",self.Triangle)
+        print("Area of the Rectangle is ",self.Rectangle)
+
+
+class Triangle(Shape):
+    def __init__(self, base, height):
+        self.base = base
+        self.height = height
+        Shape.__init__(self, "Triangle", "Filled",0.5 * self.base * self.height)
+
+
+class Rectangle(Shape):
+    def __init__(self,length,breadth):
+        self.length=length
+        self.breadth=breadth
+        Shape.__init__(self, "Rectangle", "Filled", self.length*self.breadth)
+Rec=Rectangle(5,6).show_info()
+Tri=Triangle(7,4).show_info()
+
+#Features of Animals
+class Bear(object):
+    def sound(self):
+        print ("Bear sounds as Groar")
+    def legs(self):
+        print("Bears have 4 legs ")
+ 
+class Dog(object):
+    def sound(self):
+        print ("Dog barks ")
+    def legs(self):
+        print("Dogs have 4 legs")
+
+def makeSound(animalType):
+    animalType.sound()
+def typeLegs(animalLegs):
+    animalLegs.legs()
+
+bear = Bear()
+dog = Dog()
+
+ 
+makeSound(bear)
+makeSound(dog)
+typelegs(bear)
+typelegs(dog)
+
+
+#Different  animals(Inheritance)
+class Animal:
+    def __init__(self,type, place):
+        self.place = place
+        self.type= type
+
+    def show_info(self):
+        print("%s is a %s of type %s " % (self.name, self.type, self.breed))
+
+
+class Dog(Animal):
+    def __init__(self, name, breed, Eat):
+        self.name = name
+        self.breed = breed
+        self.Eat = Eat
+        Animal.__init__(self, 'Dog','Ground')
+
+class Cat(Animal):
+    def __init__(self, name, breed, Eat):
+        self.name = name
+        self.breed = breed
+        self.Eat = Eat
+        Animal.__init__(self, 'Cat','Ground')
+
+Tommy=Dog('Tommy','Normal','Bone')
+Tommy.show_info()
+
+
+#Hybird Inheritance
+class Person:
+    def __init__(self, type):
+        self.type=type
+    def show_info(self):
+        print("%s %d %s %d ",self.company_name,self.id,self.name,self.age)
+
+
+class Male_Employee(Person):
+    def __init__(self,name,age):
+        self.name=name
+        self.age=age
+        Person.__init__(self,'Male')
+    def show_info(self):
+        print("%s %d %s %d ",self.company_name,self.id,self.name,self.age)
+
+
+
+class Female_Employee(Person):
+    def __init__(self,name,age):
+        self.name=namea
+        self.age=age
+        Person.__init__(self, 'Female')
+
+    def show_info(self):
+        print("%s %d %s %d ",self.company_name,self.id,self.name,self.age)
+
+class Employee(Male_Employee,Female_Employee):
+    def __init__(self,company_name,id,type):
+        self.company_name=company_name
+        self.id=id
+        self.type=type
+        if type=="Male":
+            Male_Employee.__init__(self,'ABC','10')
+        elif type=="Female":
+             Female_Employee.__init__(self, 'ABC', '15')
+
+
+Shyamala=("ust",'12','Female')
+Shyamala.Show_info()
+
+
