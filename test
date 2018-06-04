@@ -1,0 +1,235 @@
+#postfix  
+    
+
+def evaluate_postfix(formula):
+    stack = []
+    for ch in formula:
+        if ch not in OPERATORS:
+            stack.append(float(ch))
+        else:
+            b = stack.pop()
+            a = stack.pop()
+            c = {'+':a+b, '-':a-b, '*':a*b, '/':a/b}[ch]
+            stack.append(c)
+    print stack[-1]
+    return stack[-1]
+
+
+Q_5.
+def __int___(self,target,access):
+    
+  class principle(self,target,access):
+    self.target=target
+    self.access=access
+  class nonteaching_staff(self,target,access):
+    pass
+  class Teaching_staff(self,target,access):
+    pass
+#implementing the encapsulation 
+#from encapsulation import encapsulation 
+x= encapsulation(11,13,17)
+x.public()
+x.private()
+x.protected()    
+
+def encapsulation():
+     return 0
+
+
+Q_3.
+
+
+import numpy as np
+import pandas as pd
+
+Age = np.array([25,40,30,60,20,50,55,20,50,32,60])
+Employment = np.array(['Private','Govt','Private','Self Employed','Govt','Private','Self Employed','Govt','Private','Govt','Self Employed'])
+Marital_Status = np.array(['single','married','single','single','single','single','married','married','single','','married'])
+Gender = np.array(['M','M','F','F','M','F','F','M','F','M','F'])
+Income = np.array(['<5','>5','>5','<5','<5','>5','<5','<5','>5','<5','<5'])
+
+#since we importing the table we can assign a ,b,c variables instead of x and y
+a = (Age,Employment,Marital_Status,Gender,Income)
+b = np.array(a)
+c = b.T #contains the transpose of b to obtain column
+data = pd.DataFrame(c,columns = ['Age','Employment','Marital Status','Gender','Income'])
+data = data.drop(9)
+data1 = pd.DataFrame(index = [0,1,2,3,4,5,6,7,8,10],columns = ['Age','Employment','Marital Status','Gender','Income'])
+
+for i in data.index:
+    data1['Age'][i] = data['Age'][i]
+for i in data.index:
+    if(data['Employment'][i] == 'Private'):
+        data1['Employment'][i] = 0
+    elif(data['Employment'][i] == 'Govt'):
+        data1['Employment'][i] = 1
+    elif(data['Employment'][i] == 'Self Employed'):
+        data1['Employment'][i] = 2
+
+for i in data.index:
+    if(data['Marital Status'][i] == 'single'):
+        data1['Marital Status'][i] = 0
+    elif(data['Marital Status'][i] == 'married'):
+        data1['Marital Status'][i] =  1
+        
+for i in data.index:
+    if(data['Gender'][i] == 'M'):
+        data1['Gender'][i] = 0
+    elif(data['Gender'][i] == 'F'):
+        data1['Gender'][i] = 1
+        
+for i in data.index:
+    if(data['Income'][i] == '<5'):
+        data1['Income'][i] = 0
+    elif(data['Income'][i] == '>5'):
+        data1['Income'][i] = 1
+        
+a = []
+income = []
+g = []
+m = []
+emp_no = []
+for i in data1.index:
+    new_age = int(data1['Age'][i])
+    a.append(new_age)
+    new_age = int(data1['Employment'][i])
+    emp_no.append(new_age)
+    new_age = int(data1['Marital Status'][i])
+    m.append(new_age)
+    new_age = int(data1['Gender'][i])
+    g.append(new_age)
+    new_age = int(data1['Income'][i])
+    income.append(new_age)
+        
+dataset = dataset = np.array([a, emp_no, m, g, income])
+dataset = dataset.T
+dataset = pd.DataFrame(dataset)
+dataset.columns = ['Age','Employment','Marital_Status','Gender','Income']
+x = dataset[['Age','Employment','Marital_Status','Gender']]
+y = dataset['Income'] 
+      
+
+print("Logistic Regression : \n")
+from sklearn import linear_model
+log_reg = linear_model.LogisticRegression()
+log_reg.fit(x,y)
+
+#test_data
+test_data = 2
+a1 = [28,30]
+a2 = [0,1]
+a3 = [0,1]
+a4 = [10,0]
+
+for i in range(test_data):
+    if(log_reg.predict(np.array([a1[i],a2[i],a3[i],a4[i]]).reshape(1, -1)) == 0):
+        print("Income <5 Lakhs")
+    else:
+        print("Income is >5 Lakhs")
+        
+Q_1.
+import statistics as stats
+n=int(input("Enter the number of employee:"))
+age=[]
+salary=[]
+name=[]
+#input of 15 employees
+for i in range(n):
+      n=input("Enter the name of the employee:")
+      name.append(n)
+      a= int(input("Enter the age of the employee"))
+      age.append(a)
+      s=int(input("Enter the salary of the employee"))
+      salary.append(s)
+      
+#printing the input 
+for i in range(n):
+      print("\t Name \t Age \t Salary :""") 
+      print("\t %s \t %d \t %d",name[i],age[i], )
+#mode and median of the salary      
+for j in range(salary):
+      print("The median of the salary:"  ,stats.median(salary[i]))
+      print("The mean of the salary:",stats.median(salary[i]))
+#sort age of the employee
+for i in range(n):
+  age[i].sort()
+
+#grouping employee based on the salary 
+employeesalarylow=[] 
+employeesalaryhigh=[]
+for i in range(n):
+     if salary[i]<10000:
+         employeesalarylow.append[salary][i]
+     else:
+         employeesalaryhigh.append[salary][i]
+#grouping employee based on age 
+senior =[]
+j=[]
+for i in range(n):
+     if age[i]<40:
+         senior.append[age][i]
+     else:
+         j.append[age][i]
+         
+#f=fopen(r'C:\Users\user\Desktop\data.txt')
+#f.close()
+#f=f.write(w'C:\Users\user\Desktop\data.txt')
+#f.close()
+         
+ #changing the salary of first employee        
+for i in range(n):
+  salary[i] =25000  
+  print(salary[0])
+                  
+ Q_2.
+import pandas as pd
+import matplotlib.pyplot as plt
+
+ 
+data=pd.read_csv(r"C:\Users\user\Desktop\camera.csv",sep=';')
+
+print(data.shape)
+print(data.head())
+print(data.columns)
+data.dtypes
+
+
+temp= ["Model","Release date","Price"]
+data2=data[temp]
+data2.iloc[1:25,:]
+
+
+print("Summary",data.describe())
+
+print("Price Summary ",data["Price"].describe())
+
+
+data=data[data['Price'] >'1000']
+
+plt.figure(figsize=(6,3))
+plt.plot(data['Release date'],data['Price'])
+plt.xlabel("Release date")
+plt.ylabel("Price")
+
+plt.figure(figsize=(7,2))
+plt.scatter(data['Release date'],data['Model'])
+plt.xlabel("Release date")
+plt.ylabel("Model")
+
+plt.figure(figsize=(6,3))
+plt.scatter(data['Release date'],data['Price'])
+plt.xlabel("Release date")
+plt.ylabel("Price")
+
+
+plt.figure(figsize=(6,3))
+plt.scatter(data['Low resolution'],data['Price'])
+plt.xlabel("Low resolution")
+plt.ylabel("Price")
+
+plt.figure(figsize=(6,6))
+plt.scatter(data['Storage included'],data['Price'])
+plt.xlabel("Storage included")
+plt.ylabel("Price")
+
+plt.show()
